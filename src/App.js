@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import styled from 'styled-components';
 import './App.css';
+import Mycom from './Mycom';
+const Button = styled.button
+  `color:red;
+background-color:black;
+border-radius:50rem;
+display:block;
+width:150px;
+height:150px;
+margin: 0 auto;
+border:0;
+font-size:2rem`;
+
+
+const Outputcom = styled(Mycom)`
+  padding: 30px;
+`
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button>Click</Button>
+      <Mycom cls="red">니가 바로 children이야</Mycom>
+      <Mycom>니가 바로 children이야</Mycom>
+      <Mycom>니가 바로 children이야</Mycom>
+      <Outputcom>손코딩</Outputcom>
+
     </div>
   );
 }
